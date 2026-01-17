@@ -2,11 +2,11 @@ const esbuild = require("esbuild");
 
 esbuild
   .build({
-    entryPoints: ["src/index.ts"],
+    entryPoints: ["src/http/server.ts"],
     bundle: true,
     platform: "node",
     target: "node18",
-    outfile: "dist/index.js",
+    outfile: "dist/server.js",
     sourcemap: true,
   })
   .catch(() => process.exit(1));
